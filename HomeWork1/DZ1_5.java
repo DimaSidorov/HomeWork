@@ -14,7 +14,7 @@ public class DZ1_5 {
         }
         if (n2) {
             System.out.println("Я тебя так долго ждал");
-        } else {
+        } if (!n1&&!n2){
             System.out.println("Добрый день, а вы кто?");
         }
     }
