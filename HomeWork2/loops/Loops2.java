@@ -1,30 +1,47 @@
 package HomeWork2.loops;
 
-public class Loops1_1 {
+public class Loops2 {
     public static void main(String[] args) {
-        System.out.println(" = " + factorial("10"));
+        System.out.println(" = " + factorial("1234.456"));
     }
 
     /**
-     * @param number число до которого считается факториал
-     * @return значение факториала
+     * @param number число цифры которого перемножаются
+     * @return произведение цифр переданного числа
      */
     public static String factorial(String number) {
-        long x = Long.parseLong(number);
-        long result = 1;
-        if(x<0){
-            return "Вы ввели отрицательное число, вычеслить факториал отрицательного числа невозможно";
-        }
-        if (x == 0){
-            return "Вы ввели 0, для вычесления факториала число должно быть больше 1";
-        }
-        for (int i = 1; i <= x; i++) {
-            System.out.print(i);
-            if (i < x) {
-                System.out.print("*");
+        try {
+            double x = Double.parseDouble(number);
+            if (x % 1 > 0) {
+                return "Введено не целое число";
+            } else if (x % 1 == 0) {
+                long result = 1;
+                long i = 1;
+                int count = 0;
+                while (x >= 1) {
+                    count++;
+                    x /= 10;
+                }
+                long y = Long.parseLong(number);
+                int ten = 10;
+                while (count > 0) {
+                    i = y / ((int) (Math.pow(10, count - 1)));
+                    y = y % ((int) (Math.pow(10, count - 1)));
+                    count--;
+                    System.out.print(i);
+                    if (count > 0) {
+                        System.out.print("*");
+                    }
+                    result = result * i;
+                }
+
+                return "" + result;
             }
-            result = result * i;
+        return "";
+    }
+       catch (NumberFormatException e){
+            return "Введено не число";
         }
-        return "" +result;
+
     }
 }
