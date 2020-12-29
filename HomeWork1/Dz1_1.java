@@ -2,6 +2,7 @@ package HomeWork1;
 
 public class Dz1_1 {
     public static void main(String[] args) {
+
         byte a = 42;     // 00101010
         byte b = 15;     // 00001111
         byte c = -42;    // 11010110
