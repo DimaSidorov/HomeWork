@@ -2,6 +2,7 @@ package HomeWork2.loops;
 
 public class Loops1_5 {
     public static void main(String[] args) {
+
         multiplicationTable(2, 6 );
         System.out.println();
         multiplicationTable(6, 10);

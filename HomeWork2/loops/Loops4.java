@@ -11,12 +11,15 @@ public class Loops4 {
 
         long result = 1;
         int i = 1;
+
         if (num > 0) {
             for (i = 1; i <= result; i++) {
                 result *= num;
             }
+
             long[] container = new long[i];
             result = 1;
+
             for (i = 1; i <= result; i++) {
                 result *= num;
                 container[i - 1] = result;
@@ -30,6 +33,7 @@ public class Loops4 {
                 result *= Math.abs(num);
             }
             long[] container = new long[imax];
+
             for (i = 1; i <= imax; i++) {
                 result *= num;
                 container[i-1] = result;

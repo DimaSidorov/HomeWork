@@ -26,6 +26,7 @@ public class Arrays2_1 {
 
     public static void printArrayToConsole(int[] container){
         int i1 = 1;
+
         if(container.length > 1) {
             System.out.print("Полученный массив [");
             do {
@@ -39,11 +40,13 @@ public class Arrays2_1 {
     }
 
     public static void prinArrayToConsoleSecondElements(int[] container){
+
         if(container.length == 1){
             System.out.println("В данном массиве нету второго элемента");
         return;
         }
         System.out.print("Каждый второй элемент массива - [" );
+
         for (int i = 1; i < container.length; ){
             if (i+2 < container.length){
                 System.out.print(container[i+1]+", ");
@@ -57,7 +60,9 @@ public class Arrays2_1 {
 
     public static void printExArrayToConsole(int[] container){
         int i = container.length;
+
         System.out.print("Элементы массива в обратном порядке - [");
+
         while (i > 1) {
                 System.out.print(container[i-1] + ", ");
                 i--;

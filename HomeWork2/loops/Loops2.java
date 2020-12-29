@@ -12,6 +12,7 @@ public class Loops2 {
     public static String factorial(String number) {
         try {
             double x = Double.parseDouble(number);
+
             if (x % 1 > 0) {
                 return "Введено не целое число";
             } else if (x % 1 == 0) {
@@ -24,6 +25,7 @@ public class Loops2 {
                 }
                 long y = Long.parseLong(number);
                 int ten = 10;
+
                 while (count > 0) {
                     i = y / ((int) (Math.pow(10, count - 1)));
                     y = y % ((int) (Math.pow(10, count - 1)));
@@ -34,8 +36,8 @@ public class Loops2 {
                     }
                     result = result * i;
                 }
-
                 return "" + result;
+
             }
         return "";
     }

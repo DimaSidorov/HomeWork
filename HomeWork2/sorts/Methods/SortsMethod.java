@@ -9,10 +9,14 @@ public class SortsMethod {
      */
 
     public static int[] bubbleSorts(int[] container){
+
         boolean isSorts = false;
         int tmp = 0;
+
         while (!isSorts){
+
             isSorts = true;
+
             for (int i = 0; i < container.length-1; i++) {
                 if(container[i] > container[i+1]){
                     tmp = container[i+1];
@@ -31,9 +35,11 @@ public class SortsMethod {
      * @return  Возвращает отсортированный по возрастанию массив, методом шейкерной сортировки
      */
     public static int[] shakerSorts(int[] cont){
+
         int tmp = 0;
         int leftSide = 0;
         int rightSide = cont.length-1;
+
         do{
             for (int i = leftSide; i < rightSide; i++){
                 if (cont[i] > cont[i+1]){
@@ -43,6 +49,7 @@ public class SortsMethod {
                 }
             }
             rightSide--;
+
             for (int i = rightSide; i > leftSide; i--){
                 if(cont[i] < cont[i-1] ){
                     tmp = cont[i-1];

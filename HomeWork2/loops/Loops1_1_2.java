@@ -1,6 +1,7 @@
 package HomeWork2.loops;
 
 public class Loops1_1_2 {
+
     public static long result = 1;
     public static long i = 1;
     public static void main(String[] args) {
@@ -13,6 +14,7 @@ public class Loops1_1_2 {
      */
     public static String factorial(String number) {
         long x = Long.parseLong(number);
+
         if(x<0){
             return "Вы ввели отрицательное число, вычеслить факториал отрицательного числа невозможно";
         }
@@ -27,6 +29,7 @@ public class Loops1_1_2 {
             result = result * i;
             i++;
             return factorial(number);
+
         }
         return "" +result;
     }
